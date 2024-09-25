@@ -10,7 +10,7 @@ function rockPaperScissors(player1, player2) {
   if (player1 === player2) {
     return "draw";
   } else {
-    for (let choice of Object.keys(WINCOMBS)) {
+    for (const choice of Object.keys(WINCOMBS)) {
       if (player1 === choice && WINCOMBS[choice].includes(player2)) {
         return "player1";
       }
