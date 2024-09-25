@@ -12,7 +12,7 @@ function rockPaperScissors(player1, player2) {
     return "draw";
   } else {
     for (let choice of Object.keys(WINCOMBS)){
-      if (player1 === choice && player2 === WINCOMBS[choice]){
+      if (player1 === choice && WINCOMBS[choice].includes(player2)){
         return "player1";
       }
     }
@@ -22,7 +22,7 @@ function rockPaperScissors(player1, player2) {
    
 
 
-console.log(rockPaperScissors("scissors", "rock"));
+console.log(rockPaperScissors("scissors", "spock"));
 
 
 
