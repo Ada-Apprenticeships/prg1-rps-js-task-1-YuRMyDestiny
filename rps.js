@@ -1,11 +1,11 @@
 function rockPaperScissors(player1, player2) {
 
   const WINCOMBS = {
-    "rock": "scissors",
-    "paper": "rock",
-    "scissors": "paper",
-    "lizard": "spock",
-    "spock": "scissors",
+    "rock": ["scissors", "lizard"],
+    "paper": ["rock", "spock"],
+    "scissors": ["paper", "lizard"],
+    "lizard": ["spock", "paper"],
+    "spock": ["scissors", "rock"],
   };
 
   if (player1 === player2){
