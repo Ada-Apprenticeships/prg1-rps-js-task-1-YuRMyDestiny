@@ -1,4 +1,8 @@
 function rockPaperScissors(player1, player2) {
+  if (player1 === player2) {
+    return "draw";
+  }
+
   const winCombs = {
     rock: ["scissors", "lizard"],
     paper: ["rock", "spock"],
@@ -7,9 +11,6 @@ function rockPaperScissors(player1, player2) {
     spock: ["scissors", "rock"],
   };
 
-  if (player1 === player2) {
-    return "draw";
-  }
   return winCombs[player1].includes(player2) ? "player1" : "player2";
 }
 
